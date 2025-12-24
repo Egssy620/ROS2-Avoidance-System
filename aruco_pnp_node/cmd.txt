@@ -1,0 +1,6 @@
+cd ~/ros2_ws
+rm -rf build/ install/ log/
+colcon build --packages-select aruco_pnp_node
+source install/setup.bash
+ros2 run aruco_pnp_node aruco_pnp_node
+

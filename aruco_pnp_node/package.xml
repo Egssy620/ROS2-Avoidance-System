@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>aruco_pnp_node</name>
+  <version>0.1.0</version>
+  <description>Estimate camera pose from multiple ArUco markers via solvePnP (ROS2 Humble).</description>
+  <maintainer email="you@example.com">Your Name</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>rclcpp</depend>
+  <depend>geometry_msgs</depend>
+
+  <!-- OpenCV はCMakeでfind_packageするだけなので宣言はこれで十分 -->
+  <build_depend>opencv4</build_depend>
+  <exec_depend>opencv4</exec_depend>
+  <build_depend>cv_bridge</build_depend>
+  <exec_depend>cv_bridge</exec_depend>
+  <depend>opencv</depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
+
