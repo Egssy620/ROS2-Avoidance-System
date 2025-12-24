@@ -48,3 +48,8 @@ ROS2 Avoidance System は、ROS2 上で動作する自律移動ロボット向�
 ```bash
 mkdir -p ~/ros2_avoidance_ws/src
 cd ~/ros2_avoidance_ws/src
+
+## 🚙 コア制御ノードを起動
+
+```bash
+ros2 launch ros2_launch_ws avoidance_system.launch.py
