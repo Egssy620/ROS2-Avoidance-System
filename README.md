@@ -49,10 +49,10 @@ ROS2 Avoidance System は、ROS2 上で動作する自律移動ロボット向�
 mkdir -p ~/ros2_avoidance_ws/src
 cd ~/ros2_avoidance_ws/src
 
-```markdown
-## ▶️ 起動方法
-
-### 🚙 コア制御ノードを起動
+### 2. リポジトリのクローン
 
 ```bash
+git clone https://github.com/Egssy620/ROS2-Avoidance-System.git
+cd ..
+
 ros2 launch ros2_launch_ws avoidance_system.launch.py
