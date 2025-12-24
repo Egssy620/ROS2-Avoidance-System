@@ -25,8 +25,8 @@ ROS2 Avoidance System は、ROS2 上で動作する自律移動ロボット向�
 | `cmd_vel_mux`        | 複数ソースの速度指令合成 |
 | `manage_node`        | 状態遷移管理（回避・走行統合制御） |
 | `task_node`          | 上位指令・ミッション制御 |
-| `aruco_pnp_node`     | ArUcoマーカーによる位置推定（オプション） |
-| `ros2_launch_ws`     | 起動用Launchファイル集 |
+| `aruco_pnp_node`     | ArUcoマーカーによる位置推定 |
+| `ros2_launch_ws`     | 起動用Launchファイル群 |
 
 ---
 
@@ -49,9 +49,10 @@ ROS2 Avoidance System は、ROS2 上で動作する自律移動ロボット向�
 mkdir -p ~/ros2_avoidance_ws/src
 cd ~/ros2_avoidance_ws/src
 
----
+```markdown
+## ▶️ 起動方法
 
-## 🚙 コア制御ノードを起動
+### 🚙 コア制御ノードを起動
 
 ```bash
 ros2 launch ros2_launch_ws avoidance_system.launch.py
