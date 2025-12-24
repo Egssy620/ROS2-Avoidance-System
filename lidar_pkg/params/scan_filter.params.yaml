@@ -1,0 +1,18 @@
+scan_shadow_filter_node:
+  ros__parameters:
+    raw_mode: false
+    invert_vertical: true
+    threshold: 0.30
+    proximity_radius: 1.5
+    output_frame_id: "base_link"
+
+    # 取り付け向き・位置
+    laser_offset_x: 0.35
+    laser_offset_y: 0.0
+    laser_offset_yaw: 0.0
+
+    # 近距離ゲート
+    min_range: 0.01
+    min_radius_robot: 0.00
+    epsilon_radius: 0.00
+

@@ -1,0 +1,26 @@
+# パッケージ作成
+ros2 pkg create navigation_pkg --build-type ament_cmake --dependencies rclcpp std_msgs
+
+# 実行ファイル作成
+touch lidar_scan_matcher_node.cpp
+
+cd ~/ros2_ws
+
+ros2 run urg_node urg_node_driver \
+  --ros-args \
+  -p serial_port:=/dev/ttyACM0 \
+  -p serial_baud:=115200 \
+  -p frame_id:=laser
+  
+
+# コンポーネント登録した ファイルを component_containerで実行する場合:
+ros2 run rclcpp_components component_container
+# 別ターミナルで
+ros2 component load /ComponentManager lidar_pkg scan_shadow_filter::ScanShadowFilterNode
+ros2 component load /ComponentManager lidar_pkg wall_filter_pkg::WallFilterNode
+ros2 component load /ComponentManager lidar_pkg line_extraction::LineExtractionNode
+ros2 component load /ComponentManager lidar_pkg lidar_scan_matcher::LidarScanMatcherNode
+
+ros2 topic echo /lidar_scan_matcher/relative_transform
+
+
