@@ -49,6 +49,8 @@ ROS2 Avoidance System は、ROS2 上で動作する自律移動ロボット向�
 mkdir -p ~/ros2_avoidance_ws/src
 cd ~/ros2_avoidance_ws/src
 
+---
+
 ## 🚙 コア制御ノードを起動
 
 ```bash
